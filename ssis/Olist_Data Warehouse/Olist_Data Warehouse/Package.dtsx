@@ -1,0 +1,1168 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/24/2026 9:56:07 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-7TUVVME"
+  DTS:CreatorName="DESKTOP-7TUVVME\katle"
+  DTS:DTSID="{37D76603-B810-431B-AF90-9B3C66D90D6D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="7177"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{01A8CEAE-E3A6-464F-A089-17D5BF1F1829}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-7TUVVME.Olists_dwh]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A7236154-8ABF-449D-917F-D8A5D152802A}"
+      DTS:ObjectName="DESKTOP-7TUVVME.Olists_dwh">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-7TUVVME;Initial Catalog=Olists_dwh;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{A7236154-8ABF-449D-917F-D8A5D152802A}DESKTOP-7TUVVME.Olists_dwh;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Customers"
+      DTS:DTSID="{97259B6A-1F68-496A-BA3A-4409C8A8EFB0}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowsToSkip="1"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\katle\OneDrive - University of Pretoria\Data Engineering\Olists_DWH\Data\raw\olist_customers_dataset.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;customer_id&quot;"
+              DTS:DTSID="{6B3FB56B-9D8A-4B0D-B3FF-B3259E2222EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;customer_unique_id&quot;"
+              DTS:DTSID="{0766B509-DB27-40C0-A6AC-FA46B08AD928}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;customer_zip_code_prefix&quot;"
+              DTS:DTSID="{13F575DA-CC87-4C39-8FB6-2A2A75FB04EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;customer_city&quot;"
+              DTS:DTSID="{8C674CA1-1E67-46F8-93DB-E39B7510289A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;customer_state&quot;"
+              DTS:DTSID="{D8364A85-38D4-4E59-A013-F8479509C636}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Customers"
+      DTS:DTSID="{F7A05F28-CC4B-4997-9CDB-BD5BBA3D1E6E}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowsToSkip="1"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\katle\OneDrive - University of Pretoria\Data Engineering\Olists_DWH\Data\raw\olist_customers_dataset.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="06b8999e2fba1a1fbc88172c00ba8bc7"
+              DTS:DTSID="{21D9B039-81AF-438D-AABE-25A0EA3F548B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="861eff4711a542e4b93843c6dd7febb0"
+              DTS:DTSID="{0ABC01BC-E2A9-494F-A926-5ABBF2F5124F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="14409"
+              DTS:DTSID="{044DF85A-5156-4E97-8B9D-E564B5DC8DA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="franca"
+              DTS:DTSID="{DB1FFFA0-6EB6-4B10-90C0-D0F467ADC35B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SP"
+              DTS:DTSID="{3D583993-F3AF-49B0-AB76-AE82FAF89AE9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\02_Create_Schema"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{4054B7B9-A881-4570-A83F-A8BFB3150617}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="02_Create_Schema"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+          SQLTask:SqlStatementSource="&#xA;USE Olists_dwh;&#xA;GO&#xA;&#xA;IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = N'bronze')&#xA;    EXEC('CREATE SCHEMA bronze');&#xA;GO&#xA;IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = N'silver')&#xA;    EXEC('CREATE SCHEMA silver');&#xA;GO&#xA;IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = N'gold')&#xA;    EXEC('CREATE SCHEMA gold');&#xA;GO&#xA;IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = N'etl')&#xA;    EXEC('CREATE SCHEMA etl');&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\03_Create_Bronze_tables"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{6C581B2A-B049-4E05-A4CC-58197A0D8828}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="03_Create_Bronze_tables">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\03_Create_Bronze_tables\03_Create_Geolocation_table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{E8542836-31D3-4FCF-ACD4-595CB82B3E3E}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="03_Create_Geolocation_table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+              SQLTask:SqlStatementSource="IF NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM [Olists_dwh].sys.tables t&#xA;    JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;    WHERE s.name = N'bronze' AND t.name = N'geolocation'&#xA;)&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[bronze].[geolocation] (&#xA;        [geolocation_zip_code_prefix] NVARCHAR(50),&#xA;        [geolocation_lat]             NVARCHAR(50),&#xA;        [geolocation_lng]             NVARCHAR(50),&#xA;        [geolocation_city]            NVARCHAR(100),&#xA;        [geolocation_state]           NVARCHAR(50),&#xA;        [wh_load_ts]                  DATETIME2     DEFAULT SYSDATETIME(),&#xA;        [dwh_source_file]             NVARCHAR(260),&#xA;        [dwh_batch_id]                INT&#xA;    );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\03_Create_Bronze_tables\Customers_table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{F098E64C-25AC-4BC3-A45F-072F0930F4C0}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Customers_table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+              SQLTask:SqlStatementSource="IF NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM [Olists_dwh].sys.tables t&#xA;    JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;    WHERE s.name = N'bronze' AND t.name = N'customers'&#xA;)&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[bronze].[customers] (&#xA;        [customer_id]              NVARCHAR(50),&#xA;        [customer_unique_id]       NVARCHAR(50),&#xA;        [customer_zip_code_prefix] NVARCHAR(50),&#xA;        [customer_city]            NVARCHAR(100),&#xA;        [customer_state]           NVARCHAR(50),&#xA;        [wh_load_ts]               DATETIME2     DEFAULT SYSDATETIME(),&#xA;        [dwh_source_file]          NVARCHAR(260),&#xA;        [dwh_batch_id]             INT&#xA;    );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\03_Create_Bronze_tables\Load_Log"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{97371513-7FF6-4875-8D4F-8B85BF49E649}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load_Log"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="9">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+              SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT 1 FROM [Olists_dwh].sys.tables t&#xA;               JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;               WHERE s.name = N'etl' AND t.name = N'load_log')&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[etl].[load_log] (&#xA;        load_id      INT IDENTITY(1,1) PRIMARY KEY,&#xA;        batch_id     INT           NOT NULL,&#xA;        source_file  NVARCHAR(500) NOT NULL,&#xA;        target_table NVARCHAR(256) NOT NULL,&#xA;        rows_loaded  INT           NULL,&#xA;        load_status  VARCHAR(20)   NOT NULL,&#xA;        load_end     DATETIME2     NOT NULL DEFAULT SYSDATETIME()&#xA;    );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\03_Create_Bronze_tables\Orders_item_table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{3825A009-D567-4CDD-800C-DE9BC7CF9239}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Orders_item_table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+              SQLTask:SqlStatementSource="IF NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM [Olists_dwh].sys.tables t&#xA;    JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;    WHERE s.name = N'bronze' AND t.name = N'order_items'&#xA;)&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[bronze].[order_items] (&#xA;        [order_id]            NVARCHAR(50),&#xA;        [order_item_id]       NVARCHAR(50),&#xA;        [product_id]          NVARCHAR(50),&#xA;        [seller_id]           NVARCHAR(50),&#xA;        [shipping_limit_date] NVARCHAR(50),&#xA;        [price]               NVARCHAR(50),&#xA;        [freight_value]       NVARCHAR(50),&#xA;        [wh_load_ts]          DATETIME2     DEFAULT SYSDATETIME(),&#xA;        [dwh_source_file]     NVARCHAR(260),&#xA;        [dwh_batch_id]        INT&#xA;    );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\03_Create_Bronze_tables\Orders_table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{0FFCB662-7406-4EC7-A111-17D815E49535}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Orders_table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+              SQLTask:SqlStatementSource="IF NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM [Olists_dwh].sys.tables t&#xA;    JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;    WHERE s.name = N'bronze' AND t.name = N'orders'&#xA;)&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[bronze].[orders] (&#xA;        [order_id]                      NVARCHAR(50),&#xA;        [customer_id]                   NVARCHAR(50),&#xA;        [order_status]                  NVARCHAR(50),&#xA;        [order_purchase_timestamp]      NVARCHAR(50),&#xA;        [order_approved_at]             NVARCHAR(50),&#xA;        [order_delivered_carrier_date]  NVARCHAR(50),&#xA;        [order_delivered_customer_date] NVARCHAR(50),&#xA;        [order_estimated_delivery_date] NVARCHAR(50),&#xA;        [wh_load_ts]                    DATETIME2     DEFAULT SYSDATETIME(),&#xA;        [dwh_source_file]               NVARCHAR(260),&#xA;        [dwh_batch_id]                  INT&#xA;    );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\03_Create_Bronze_tables\Order_payments_table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C954D870-A956-473A-984A-7FFBA81EFB91}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Order_payments_table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+              SQLTask:SqlStatementSource="IF NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM [Olists_dwh].sys.tables t&#xA;    JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;    WHERE s.name = N'bronze' AND t.name = N'order_payments'&#xA;)&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[bronze].[order_payments] (&#xA;        [order_id]             NVARCHAR(50),&#xA;        [payment_sequential]   NVARCHAR(50),&#xA;        [payment_type]         NVARCHAR(50),&#xA;        [payment_installments] NVARCHAR(50),&#xA;        [payment_value]        NVARCHAR(50),&#xA;        [wh_load_ts]           DATETIME2     DEFAULT SYSDATETIME(),&#xA;        [dwh_source_file]      NVARCHAR(260),&#xA;        [dwh_batch_id]         INT&#xA;    );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\03_Create_Bronze_tables\Order_reviews_table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2B020C8A-322F-4103-A8E8-882A3C7C34E6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Order_reviews_table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="6">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+              SQLTask:SqlStatementSource="IF NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM [Olists_dwh].sys.tables t&#xA;    JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;    WHERE s.name = N'bronze' AND t.name = N'order_reviews'&#xA;)&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[bronze].[order_reviews] (&#xA;        [review_id]               NVARCHAR(50),&#xA;        [order_id]                NVARCHAR(50),&#xA;        [review_score]            NVARCHAR(50),&#xA;        [review_comment_title]    NVARCHAR(500),&#xA;        [review_comment_message]  NVARCHAR(MAX),&#xA;        [review_creation_date]    NVARCHAR(50),&#xA;        [review_answer_timestamp] NVARCHAR(50),&#xA;        [wh_load_ts]              DATETIME2     DEFAULT SYSDATETIME(),&#xA;        [dwh_source_file]         NVARCHAR(260),&#xA;        [dwh_batch_id]            INT&#xA;    );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\03_Create_Bronze_tables\Products_table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{BAC9C3D5-951D-486D-9F29-44443CCBDECC}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Products_table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+              SQLTask:SqlStatementSource="-- products&#xA;IF NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM [Olists_dwh].sys.tables t&#xA;    JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;    WHERE s.name = N'bronze' AND t.name = N'products'&#xA;)&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[bronze].[products] (&#xA;        [product_id]                 NVARCHAR(50),&#xA;        [product_category_name]      NVARCHAR(100),&#xA;        [product_name_lenght]        NVARCHAR(50),&#xA;        [product_description_lenght] NVARCHAR(50),&#xA;        [product_photos_qty]         NVARCHAR(50),&#xA;        [product_weight_g]           NVARCHAR(50),&#xA;        [product_length_cm]          NVARCHAR(50),&#xA;        [product_height_cm]          NVARCHAR(50),&#xA;        [product_width_cm]           NVARCHAR(50),&#xA;        [wh_load_ts]                 DATETIME2     DEFAULT SYSDATETIME(),&#xA;        [dwh_source_file]            NVARCHAR(260),&#xA;        [dwh_batch_id]               INT&#xA;    );&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\03_Create_Bronze_tables\Product_category_trans_table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{B2C2E4B5-4065-46CC-B582-2F5D4E5E0A1D}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Product_category_trans_table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="7">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+              SQLTask:SqlStatementSource="IF NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM [Olists_dwh].sys.tables t&#xA;    JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;    WHERE s.name = N'bronze' AND t.name = N'product_category_name_translation'&#xA;)&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[bronze].[product_category_name_translation] (&#xA;        [product_category_name]         NVARCHAR(100),&#xA;        [product_category_name_english] NVARCHAR(100),&#xA;        [wh_load_ts]                    DATETIME2     DEFAULT SYSDATETIME(),&#xA;        [dwh_source_file]               NVARCHAR(260),&#xA;        [dwh_batch_id]                  INT&#xA;    );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\03_Create_Bronze_tables\Sellers_table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2A5EB46F-6E3E-437A-957C-3719431767A4}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Sellers_table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="8">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+              SQLTask:SqlStatementSource="IF NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM [Olists_dwh].sys.tables t&#xA;    JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;    WHERE s.name = N'bronze' AND t.name = N'sellers'&#xA;)&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[bronze].[sellers] (&#xA;        [seller_id]              NVARCHAR(50),&#xA;        [seller_zip_code_prefix] NVARCHAR(50),&#xA;        [seller_city]            NVARCHAR(100),&#xA;        [seller_state]           NVARCHAR(50),&#xA;        [wh_load_ts]             DATETIME2     DEFAULT SYSDATETIME(),&#xA;        [dwh_source_file]        NVARCHAR(260),&#xA;        [dwh_batch_id]           INT&#xA;    );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7EAD9799-5910-44B9-AA1A-8D95830805F3}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="7177"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_id&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_id&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_id&quot;]"
+                      name="&quot;customer_id&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_unique_id&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_unique_id&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_unique_id&quot;]"
+                      name="&quot;customer_unique_id&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_zip_code_prefix&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_zip_code_prefix&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_zip_code_prefix&quot;]"
+                      name="&quot;customer_zip_code_prefix&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_city&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_city&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_city&quot;]"
+                      name="&quot;customer_city&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_state&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_state&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_state&quot;]"
+                      name="&quot;customer_state&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_id&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;customer_id&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_unique_id&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;customer_unique_id&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_zip_code_prefix&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;customer_zip_code_prefix&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_city&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;customer_city&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_state&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;customer_state&quot;" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[bronze].[customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-7TUVVME.Olists_dwh]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-7TUVVME.Olists_dwh]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;customer_id&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;customer_id&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_id&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;customer_unique_id&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;customer_unique_id&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_unique_id]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_unique_id&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;customer_zip_code_prefix&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;customer_zip_code_prefix&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_zip_code_prefix]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_zip_code_prefix&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;customer_city&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;customer_city&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_city]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_city&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;customer_state&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;customer_state&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_state]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;customer_state&quot;]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_unique_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="customer_unique_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_zip_code_prefix]"
+                      dataType="wstr"
+                      length="50"
+                      name="customer_zip_code_prefix" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_city]"
+                      dataType="wstr"
+                      length="100"
+                      name="customer_city" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_state]"
+                      dataType="wstr"
+                      length="50"
+                      name="customer_state" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[wh_load_ts]"
+                      dataType="wstr"
+                      length="27"
+                      name="wh_load_ts" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dwh_source_file]"
+                      dataType="wstr"
+                      length="260"
+                      name="dwh_source_file" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dwh_batch_id]"
+                      dataType="i4"
+                      name="dwh_batch_id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load_Log"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{F41248A0-43A4-4110-BE1A-4C8A9EBE093F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load_Log"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT 1 FROM [Olists_dwh].sys.tables t&#xA;               JOIN [Olists_dwh].sys.schemas s ON s.schema_id = t.schema_id&#xA;               WHERE s.name = N'etl' AND t.name = N'load_log')&#xA;BEGIN&#xA;    CREATE TABLE [Olists_dwh].[etl].[load_log] (&#xA;        load_id      INT IDENTITY(1,1) PRIMARY KEY,&#xA;        batch_id     INT           NOT NULL,&#xA;        source_file  NVARCHAR(500) NOT NULL,&#xA;        target_table NVARCHAR(256) NOT NULL,&#xA;        rows_loaded  INT           NULL,&#xA;        load_status  VARCHAR(20)   NOT NULL,&#xA;        load_end     DATETIME2     NOT NULL DEFAULT SYSDATETIME()&#xA;    );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Olists_dwh"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{4C598E02-4AAE-464B-BAF9-FDD53E09FDAE}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Olists_dwh"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT 1 FROM sys.databases WHERE name = N'Olists_dwh')&#xA;BEGIN&#xA;    CREATE DATABASE Olists_dwh;&#xA;END&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate_tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{2A6B7E07-0641-44BF-A9E1-08F7BA4C5685}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate_tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8207AF0D-142B-4E76-A286-DECFC6CC60EF}"
+          SQLTask:SqlStatementSource="IF OBJECT_ID(N'[Olists_dwh].[bronze].[customers]', N'U') IS NOT NULL&#xA;    TRUNCATE TABLE [Olists_dwh].[bronze].[customers];&#xA;&#xA;IF OBJECT_ID(N'[Olists_dwh].[bronze].[geolocation]', N'U') IS NOT NULL&#xA;    TRUNCATE TABLE [Olists_dwh].[bronze].[geolocation];&#xA;&#xA;IF OBJECT_ID(N'[Olists_dwh].[bronze].[order_items]', N'U') IS NOT NULL&#xA;    TRUNCATE TABLE [Olists_dwh].[bronze].[order_items];&#xA;&#xA;IF OBJECT_ID(N'[Olists_dwh].[bronze].[order_payments]', N'U') IS NOT NULL&#xA;    TRUNCATE TABLE [Olists_dwh].[bronze].[order_payments];&#xA;&#xA;IF OBJECT_ID(N'[Olists_dwh].[bronze].[order_reviews]', N'U') IS NOT NULL&#xA;    TRUNCATE TABLE [Olists_dwh].[bronze].[order_reviews];&#xA;&#xA;IF OBJECT_ID(N'[Olists_dwh].[bronze].[orders]', N'U') IS NOT NULL&#xA;    TRUNCATE TABLE [Olists_dwh].[bronze].[orders];&#xA;&#xA;IF OBJECT_ID(N'[Olists_dwh].[bronze].[products]', N'U') IS NOT NULL&#xA;    TRUNCATE TABLE [Olists_dwh].[bronze].[products];&#xA;&#xA;IF OBJECT_ID(N'[Olists_dwh].[bronze].[sellers]', N'U') IS NOT NULL&#xA;    TRUNCATE TABLE [Olists_dwh].[bronze].[sellers];&#xA;&#xA;IF OBJECT_ID(N'[Olists_dwh].[bronze].[product_category_name_translation]', N'U') IS NOT NULL&#xA;    TRUNCATE TABLE [Olists_dwh].[bronze].[product_category_name_translation];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{2BC36A7C-A02A-494C-B3E0-C56C9D533319}"
+      DTS:From="Package\Olists_dwh"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\02_Create_Schema" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{F3114F48-C4B9-46E7-AD50-9D5C7154FFEB}"
+      DTS:From="Package\02_Create_Schema"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\03_Create_Bronze_tables" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{3F81A03F-F217-4471-8802-33EDE9BA36EA}"
+      DTS:From="Package\03_Create_Bronze_tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Load_Log" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{513B2A35-C86E-4F29-836C-1BB37CA4304D}"
+      DTS:From="Package\Truncate_tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Data Flow Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{06D816E6-F79D-42F0-B521-C3739657C785}"
+      DTS:From="Package\Load_Log"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Truncate_tables" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\02_Create_Schema"
+          TopLeft="828.441763172969,106.566666172478" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\03_Create_Bronze_tables\03_Create_Geolocation_table"
+          TopLeft="5.50000000000009,5.49999999999995" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\03_Create_Bronze_tables\Customers_table"
+          TopLeft="230.5,5.49999999999995" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\03_Create_Bronze_tables\Order_payments_table"
+          TopLeft="447.5,5.49999999999984" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\03_Create_Bronze_tables\Order_reviews_table"
+          TopLeft="672.7,5.49999999999984" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\03_Create_Bronze_tables\Orders_item_table"
+          TopLeft="907.9,5.49999999999984" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\03_Create_Bronze_tables\Orders_table"
+          TopLeft="1132.7,5.49999999999984" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\03_Create_Bronze_tables\Product_category_trans_table"
+          TopLeft="1331.5,5.49999999999973" />
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\03_Create_Bronze_tables\Products_table"
+          TopLeft="1556.9,5.49999999999973" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\03_Create_Bronze_tables\Sellers_table"
+          TopLeft="1765.5,5.49999999999973" />
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\03_Create_Bronze_tables\Load_Log"
+          TopLeft="45.599980330468,435.266664491031" />
+        <ContainerLayout
+          HeaderHeight="68.8"
+          IsExpanded="False"
+          PanelSize="1936,102.4"
+          Size="223.2,68.8"
+          Id="Package\03_Create_Bronze_tables"
+          TopLeft="997.888456948543,165.79682527744" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="1393.33325720496,431.19999754111" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Olists_dwh"
+          TopLeft="679.870341079998,29.7666664979192" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Truncate_tables"
+          TopLeft="1276.83062562334,352.346029475117" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="762.270341079998,71.3666664979192">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="148.571422092971,35.1999996745584"
+              Start="0,0"
+              End="148.571422092971,27.6999996745584">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5999998372792" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5999998372792"
+                    Point2="0,17.5999998372792"
+                    Point3="4,17.5999998372792" />
+                  <mssgle:LineSegment
+                    End="144.571422092971,17.5999998372792" />
+                  <mssgle:CubicBezierSegment
+                    Point1="144.571422092971,17.5999998372792"
+                    Point2="148.571422092971,17.5999998372792"
+                    Point3="148.571422092971,21.5999998372792" />
+                  <mssgle:LineSegment
+                    End="148.571422092971,27.6999996745584" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="993.241763172969,127.366666172478">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116.246693775573,38.4301591049623"
+              Start="0,0"
+              End="116.246693775573,30.9301591049623">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="112.246693775573,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="112.246693775573,0"
+                    Point2="116.246693775573,0"
+                    Point3="116.246693775573,4" />
+                  <mssgle:LineSegment
+                    End="116.246693775573,30.9301591049623" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="1353.23062562334,393.946029475117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="115.302631581624,37.2539680659933"
+              Start="0,0"
+              End="115.302631581624,29.7539680659933">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.6269840329967" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.6269840329967"
+                    Point2="0,18.6269840329967"
+                    Point3="4,18.6269840329967" />
+                  <mssgle:LineSegment
+                    End="111.302631581624,18.6269840329967" />
+                  <mssgle:CubicBezierSegment
+                    Point1="111.302631581624,18.6269840329967"
+                    Point2="115.302631581624,18.6269840329967"
+                    Point3="115.302631581624,22.6269840329967" />
+                  <mssgle:LineSegment
+                    End="115.302631581624,29.7539680659933" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\Load_Log"
+          TopLeft="1187.3147499428,264.718516677699" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="1109.48845694854,234.59682527744">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140.226292994255,30.1216914002591"
+              Start="0,0"
+              End="140.226292994255,22.6216914002591">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.0608457001296" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.0608457001296"
+                    Point2="0,15.0608457001296"
+                    Point3="4,15.0608457001296" />
+                  <mssgle:LineSegment
+                    End="136.226292994255,15.0608457001296" />
+                  <mssgle:CubicBezierSegment
+                    Point1="136.226292994255,15.0608457001296"
+                    Point2="140.226292994255,15.0608457001296"
+                    Point3="140.226292994255,19.0608457001296" />
+                  <mssgle:LineSegment
+                    End="140.226292994255,22.6216914002591" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="1249.7147499428,306.318516677699">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103.515875680539,46.0275127974177"
+              Start="0,0"
+              End="103.515875680539,38.5275127974177">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.0137563987089" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.0137563987089"
+                    Point2="0,23.0137563987089"
+                    Point3="4,23.0137563987089" />
+                  <mssgle:LineSegment
+                    End="99.5158756805386,23.0137563987089" />
+                  <mssgle:CubicBezierSegment
+                    Point1="99.5158756805386,23.0137563987089"
+                    Point2="103.515875680539,23.0137563987089"
+                    Point3="103.515875680539,27.0137563987089" />
+                  <mssgle:LineSegment
+                    End="103.515875680539,38.5275127974177" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="202.999996975064,176.999997362494" />
+        <NodeLayout
+          Size="151.2,66.4"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="136.999997958541,31.9999995231629" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="212.599997958541,98.3999995231629">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="75.9999990165232,78.5999978393316"
+              Start="0,0"
+              End="75.9999990165232,71.0999978393316">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.2999989196658" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.2999989196658"
+                    Point2="0,39.2999989196658"
+                    Point3="4,39.2999989196658" />
+                  <mssgle:LineSegment
+                    End="71.9999990165232,39.2999989196658" />
+                  <mssgle:CubicBezierSegment
+                    Point1="71.9999990165232,39.2999989196658"
+                    Point2="75.9999990165232,39.2999989196658"
+                    Point3="75.9999990165232,43.2999989196658" />
+                  <mssgle:LineSegment
+                    End="75.9999990165232,71.0999978393316" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
