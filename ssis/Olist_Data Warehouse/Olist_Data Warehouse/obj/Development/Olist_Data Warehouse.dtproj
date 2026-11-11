@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-7TUVVME</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2YiRRQi/Ak2omw1qXUEKWgAAAAACAAAAAAAQZgAAAAEAACAAAAAVr/8r4fkw7QiD1cF687sA3wlIvzUHl1bRZsknp5yUAgAAAAAOgAAAAAIAACAAAACbw6ZjH2wN8mnS361z/At4ZU7xuw0TQD4KKemK7GfHepAAAACT2eL1g6VFQ1OvGD/RCnarXGIUdRyI7OUnkdg1iqivUTzjy5PW8QuPiHJlFbcad0+LTGgVikYXuv35gUxGoN+QIJ6AcQppWA6HFklOn9oI71pxQnjzyBqPsXZ1X6xTrrB8sUxWiRnJcJeNUNcTF1mp13l2XZFTZPaUiZEBg2+LHjkEqrayWPbOc/leK1XfjPpAAAAA5wU4V5irv0uFsOUjWYW9vzyHgIhrqInTiUXs2zOCFnEwlx+ccQcvLm3xDnVu3WrJFrp7XYD5PxQsr1pDGrXE8Q==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2YiRRQi/Ak2omw1qXUEKWgAAAAACAAAAAAAQZgAAAAEAACAAAACi7gCu2usX+4DB8Ck+UohYT6Hl8AYM3lXmS3wxFDEZKwAAAAAOgAAAAAIAACAAAAB1XWog3Iv25Pp3J9VMD/TstUUXV5IDX4eBZHhQVOzpdZAAAACTfsnbNAi1sWdu8krK8nmBxxOLqkAIs7B+VONuX1BWll7bZaUucTR89NQ8vxGseIJKr1njpU+R/mR/a0tk3ArtTUSVMg1Wq8xSWkXovVDkIGYnVmgZytOW2PP2iF2T/n6qurvvdqJucKGCdf2YNVQyJBVWBPHkhsazYLMDjjq2J/HO3JQ0xo4lZbVeqlUHsO5AAAAAsMpqBqmRTG5c5LFcdb2+9+ikqeyeK36aakJz39i7k3HcpEjXeys+601XI15hPv9ec9OwhmdKLMDADoQbXeu25g==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -341,16 +341,30 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">103</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">135</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{91D1B2D7-2C1E-459C-81DE-28BF83A415B1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{7780F48C-B852-402E-80D3-4DBB1AF76FDB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="Source_folder">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{008539D1-0684-4F99-918F-7F822C5A5D30}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">"C:\Users\katle\OneDrive - University of Pretoria\Data Engineering\Olists_DWH\Data\raw"</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.DESKTOP-7TUVVME.Olists_dwh.ConnectByProxy">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
